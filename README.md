@@ -8,7 +8,7 @@ Optiroute is a robust backend service built with FastAPI and a specialized dashb
 * **Dockerized:** Fully containerized for easy deployment and consistency.
 
 ## 🛠️ Tech Stack
-* **Language:** Python 3.9+
+* **Language:** Python 3.11+
 * **Frameworks:** FastAPI (Backend), Streamlit (Frontend)
 * **Infrastructure:** Docker & Docker Compose
 
