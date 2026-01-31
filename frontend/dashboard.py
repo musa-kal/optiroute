@@ -3,6 +3,9 @@ import pandas as pd
 import requests
 import folium
 from streamlit_folium import st_folium
+import os
+
+API_BASE_URL = os.getenv("API_URL", "http://127.0.0.1:8000")
 
 st.set_page_config(layout="wide")
 st.title("🚛 OptiRoute: Logistics Optimization Engine")
@@ -22,8 +25,7 @@ if uploaded_file is not None:
     
     # Call our local API (Microservices architecture!)
     try:
-        # Note: Ensure uvicorn main:app is running on localhost:8000
-        response = requests.post("http://127.0.0.1:8000/optimize", files=files, params=params)
+        response = requests.post(f"{API_BASE_URL}/optimize", files=files, params=params)
         
         if response.status_code == 200:
             data = response.json()['data']

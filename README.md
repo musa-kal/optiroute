@@ -1,65 +1,61 @@
 # Optiroute
 
-Optiroute is a robust backend service built with [FastAPI](https://fastapi.tiangolo.com/), designed for high performance and easy scalability. It leverages Python's modern type hinting to ensure data validation and reliability.
+Optiroute is a robust backend service built with FastAPI and a specialized dashboard interface for efficient route handling.
 
 ## 🚀 Features
-
-* **High Performance:** Built on Starlette and Pydantic, making it one of the fastest Python frameworks available.
-* **Interactive Documentation:** Automatic API documentation provided by Swagger UI and ReDoc.
-* **Data Validation:** Automatic validation of request data using Python type hints.
-* **Multipart Support:** optimized for handling file uploads and form data.
+* **Backend:** High-performance REST API (FastAPI) with automatic interactive documentation.
+* **Frontend:** Interactive dashboard for visualizing route data.
+* **Dockerized:** Fully containerized for easy deployment and consistency.
 
 ## 🛠️ Tech Stack
-
 * **Language:** Python 3.9+
-* **Framework:** FastAPI
-* **Server:** Uvicorn (ASGI)
-* **Validation:** Pydantic
+* **Frameworks:** FastAPI (Backend), Streamlit (Frontend)
+* **Infrastructure:** Docker & Docker Compose
 
-## 📦 Installation
+## 📦 Installation & Usage (Docker Method)
+
+The easiest way to run the project is using Docker Compose. This ensures both the backend and dashboard run in an isolated environment.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/yourusername/optiroute.git](https://github.com/yourusername/optiroute.git)
+    git clone https://github.com/musa-kal/optiroute.git
     cd optiroute
     ```
 
-2.  **Create a virtual environment:**
+2.  **Run the application:**
     ```bash
-    # Windows
-    python -m venv venv
-    .\venv\Scripts\activate
-
-    # macOS/Linux
-    python3 -m venv venv
-    source venv/bin/activate
+    docker-compose up --build
     ```
 
-3.  **Install dependencies:**
+3.  **Access the Services:**
+    * **Dashboard:** Open [http://localhost:8501](http://localhost:8501)
+    * **API Docs:** Open [http://localhost:8000/docs](http://localhost:8000/docs)
+
+4.  **Stop the application:**
+    Press `Ctrl+C` in the terminal, or run:
     ```bash
+    docker-compose down
+    ```
+
+## 📦 Installation (Manual Method)
+
+If you prefer to run it without Docker:
+
+1.  **Backend:**
+    ```bash
+    cd backend
     pip install -r requirements.txt
-    ```
-    *(Note: Ensure `python-multipart` is included in your requirements for upload support).*
-
-## 🏃‍♂️ Usage
-
-1.  **Run the development server:**
-    ```bash
     uvicorn main:app --reload
     ```
-    *(Replace `main` with the name of your entry file if different).*
-
-2.  **Access the API:**
-    Open your browser and navigate to `http://127.0.0.1:8000`.
-
-3.  **View Documentation:**
-    * **Swagger UI:** `http://127.0.0.1:8000/docs`
-    * **ReDoc:** `http://127.0.0.1:8000/redoc`
+2.  **Frontend:**
+    ```bash
+    cd frontend
+    pip install -r requirements.txt
+    streamlit run dashboard.py
+    ```
 
 ## 🤝 Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request for any improvements.
+Contributions are welcome! Please fork the repository and submit a pull request.
 
 ## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.

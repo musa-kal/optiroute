@@ -1,0 +1,28 @@
+# Git
+.git
+.gitignore
+
+# Python cache & build artifacts
+*__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+build
+dist
+*.egg-info
+
+# Virtual Environments (Critical to ignore these!)
+venv
+env
+*.env
+
+# Docker & Deployment
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# IDE settings (Optional but recommended)
+.vscode
+.idea
+*.swp
