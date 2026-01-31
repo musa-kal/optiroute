@@ -9,7 +9,7 @@ API_BASE_URL = os.getenv("API_URL", "http://127.0.0.1:8000")
 
 st.set_page_config(layout="wide")
 st.title("🚛 OptiRoute: Logistics Optimization Engine")
-st.caption("Operator-Engineer Portfolio Project | Built with Python & Scikit-Learn")
+st.caption("Operator-Engineer Project | Built with Python & Scikit-Learn")
 
 # Sidebar for controls
 with st.sidebar:

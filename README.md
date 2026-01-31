@@ -1,24 +1,36 @@
-# Optiroute
+# Optiroute 🚚
 
-Optiroute is a robust backend service built with FastAPI and a specialized dashboard interface for efficient route handling.
+**A high-performance route optimization engine and visualization dashboard designed for last-mile delivery efficiency.**
 
-## 🚀 Features
-* **Backend:** High-performance REST API (FastAPI) with automatic interactive documentation.
-* **Frontend:** Interactive dashboard for visualizing route data.
-* **Dockerized:** Fully containerized for easy deployment and consistency.
+Optiroute bridges the gap between raw logistics data and actionable operational insights. It uses a FastAPI backend to process delivery nodes and a Streamlit dashboard to visualize optimized routing clusters, aiming to reduce driver idle time and improve delivery density.
+
+![Dashboard Screenshot](catalog/ui_showcase.png) 
+
+## 💡 The "Why"
+Logistics operations often suffer from inefficient route planning, leading to increased fuel costs and missed Service Level Agreements (SLAs). Drawing from experience in high-volume operations (e.g., Amazon Logistics), Optiroute was built to demonstrate how modern Python stacks can solve:
+* **Inefficient Clustering:** Grouping deliveries geographically to minimize "windshield time."
+* **Data Visibility:** transforming rows of address data into an interactive map for dispatchers.
+* **Scalability:** Using containerization to ensure the tool runs reliably in any environment.
+
+## 🚀 Key Features
+* **Algorithmic Routing Logic:** Backend logic designed to ingest coordinate data and propose optimized groupings.
+* **Interactive Operations Dashboard:** A Streamlit interface allows dispatchers to upload manifests and visualize routes in real-time.
+* **API-First Architecture:** Built on FastAPI with auto-generated Swagger documentation, allowing for easy integration with existing TMS (Transport Management Systems).
+* **Containerized Deployment:** Fully Dockerized environment ensures consistency from development to production.
 
 ## 🛠️ Tech Stack
-* **Language:** Python 3.11+
-* **Frameworks:** FastAPI (Backend), Streamlit (Frontend)
+* **Core Logic:** Python 3.11+
+* **Backend API:** FastAPI (High-performance async framework)
+* **Visualization:** Streamlit (Data dashboarding)
 * **Infrastructure:** Docker & Docker Compose
 
 ## 📦 Installation & Usage (Docker Method)
 
-The easiest way to run the project is using Docker Compose. This ensures both the backend and dashboard run in an isolated environment.
+The recommended way to run the project is using Docker Compose to spin up the isolated environment.
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/musa-kal/optiroute.git
+    git clone [https://github.com/musa-kal/optiroute.git](https://github.com/musa-kal/optiroute.git)
     cd optiroute
     ```
 
@@ -28,8 +40,8 @@ The easiest way to run the project is using Docker Compose. This ensures both th
     ```
 
 3.  **Access the Services:**
-    * **Dashboard:** Open [http://localhost:8501](http://localhost:8501)
-    * **API Docs:** Open [http://localhost:8000/docs](http://localhost:8000/docs)
+    * **Dashboard:** [http://localhost:8501](http://localhost:8501)
+    * **API Docs:** [http://localhost:8000/docs](http://localhost:8000/docs)
 
 4.  **Stop the application:**
     Press `Ctrl+C` in the terminal, or run:
@@ -39,7 +51,7 @@ The easiest way to run the project is using Docker Compose. This ensures both th
 
 ## 📦 Installation (Manual Method)
 
-If you prefer to run it without Docker:
+If you prefer to run it locally without Docker:
 
 1.  **Backend:**
     ```bash
@@ -54,8 +66,10 @@ If you prefer to run it without Docker:
     streamlit run dashboard.py
     ```
 
-## 🤝 Contributing
-Contributions are welcome! Please fork the repository and submit a pull request.
+## 🔮 Future Roadmap
+* Integration with open-source map tiles (OpenStreetMap) for turn-by-turn visualization.
+* Implementation of VRP (Vehicle Routing Problem) solvers/heuristics for advanced constraint handling (time windows, vehicle capacity).
+* Authentication layer for multi-tenant dispatcher use.
 
 ## 📄 License
 This project is licensed under the MIT License.
