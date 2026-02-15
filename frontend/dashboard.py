@@ -23,7 +23,6 @@ if uploaded_file is not None:
     files = {'file': uploaded_file.getvalue()}
     params = {'n_drivers': n_drivers}
     
-    # Call our local API (Microservices architecture!)
     try:
         response = requests.post(f"{API_BASE_URL}/optimize", files=files, params=params)
         
