@@ -33,5 +33,3 @@ async def optimize_routes(file: UploadFile = File(...), n_drivers: int = 5):
     result = df.to_dict(orient="records")
     
     return {"status": "optimized", "data": result}
-
-# To run: uvicorn main:app --reload
