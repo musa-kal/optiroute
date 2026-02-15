@@ -12,7 +12,7 @@ build
 dist
 *.egg-info
 
-# Virtual Environments (Critical to ignore these!)
+# Virtual Environments 
 venv
 env
 *.env
@@ -22,7 +22,7 @@ docker-compose.yml
 Dockerfile
 .dockerignore
 
-# IDE settings (Optional but recommended)
+# IDE settings
 .vscode
 .idea
 *.swp
